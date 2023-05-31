@@ -1,7 +1,6 @@
 package com.training.Assignment1;
 
 import java.util.Scanner;
-import com.assignment1.Account;
 
 public class ATMCheck 
 {
