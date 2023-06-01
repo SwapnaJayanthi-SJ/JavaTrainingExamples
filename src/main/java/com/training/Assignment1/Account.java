@@ -16,7 +16,6 @@ public class Account
 	{
 		balance = null;
 		transactions = new double[100];
-		transactionCount = 0;
 		accountcheck = 0;
 		pincheck = 0;
 		balcheck = 0;
@@ -27,6 +26,7 @@ public class Account
 
 	public boolean login(int accNum, int pinNum)
 	{
+		transactionCount = 0;
 
 		for(int i=0;i<=accountcheck;i++) 
 		{
