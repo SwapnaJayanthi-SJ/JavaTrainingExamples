@@ -24,12 +24,12 @@ public class LibrarySystem {
 				System.out.println("3.Borrow Book");
 				System.out.println("4.Return Book");
 				System.out.println("5.Exit");
-				System.out.println("Enter your choice: ");
+				System.out.print("Enter your choice: ");
 				choice = sc.nextInt();
 				switch(choice)
 				{
 				case 1:
-					if(books.count()) {
+					if(books.bookcount()) {
 						book = new Book();
 						books.addBook(book);
 					}else {
@@ -50,9 +50,10 @@ public class LibrarySystem {
 					
 					break;
 				case 3:
-					
+					book.borrowBook();
+					break;
 				case 4:
-				
+				   book.returnBook();
 				default:
 					System.out.println("Invalid option");
 				}

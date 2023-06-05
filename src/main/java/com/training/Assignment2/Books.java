@@ -1,17 +1,15 @@
 package com.training.Assignment2;
 
-import java.util.Scanner;
-
 public class Books
 {
-	public static int MAX_BOOKS=10;
+	public static int MAX_BOOKS=2;
 	Book[] Allbooks = new Book[MAX_BOOKS]; 
-	int bookcount=0;
+	int bookCount=0;
 	public int compareBookObjects(Book b1, Book b2)
 	{
 		if (b1.bookName.equalsIgnoreCase(b2.bookName)) 
 		{
-			System.out.println("This Book name is already exists");
+			System.out.println("This Book name is already exists..please add another book name");
 			return 0;
 		}
 		return 1;
@@ -20,16 +18,16 @@ public class Books
 	public void addBook(Book b)
 	{
 
-		for (int i = 0; i < bookcount; i++) 
+		for (int i = 0; i < bookCount; i++) 
 		{
 			if (this.compareBookObjects(b, this.Allbooks[i])== 0)
 				return;
 		}
-		Allbooks[bookcount++] = b;
+		Allbooks[bookCount++] = b;
 	}
-	public boolean count()
+	public boolean bookcount()
 	{
-		if(bookcount==MAX_BOOKS) {
+		if(bookCount==MAX_BOOKS) {
 			return false;
 		}
 		return true;
