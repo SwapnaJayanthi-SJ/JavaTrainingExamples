@@ -1,0 +1,45 @@
+package com.training.Assignment3.VehicleManagementSystem;
+
+public class VehicleDetails implements VehicleOperations
+{
+	protected String licensePlate;
+	protected String make;
+	protected String model;
+	private boolean isAvailable;
+
+	// Getters, setters, and other common methods
+
+	public boolean isAvailable() {
+		return isAvailable;
+	}
+
+	public void setAvailable(boolean isAvailable) {
+		this.isAvailable = isAvailable;
+	}
+
+	public String getLicensePlate() {
+		return licensePlate;
+	}
+
+	public void setLicensePlate(String licensePlate) {
+		this.licensePlate = licensePlate;
+	}
+
+	public String getMake() {
+		return make;
+	}
+
+	public void setMake(String make) {
+		this.make = make;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+
+}
