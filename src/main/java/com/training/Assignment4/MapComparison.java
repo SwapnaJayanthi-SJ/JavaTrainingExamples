@@ -58,10 +58,9 @@ public class MapComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 100000; i++)
-		{
-			hashMap.remove(i, "value"+i);
-		}
+
+		hashMap.remove(3000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -73,10 +72,8 @@ public class MapComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 100000; i++)
-		{
-			treeMap.remove(i, "value"+i);
-		}
+		treeMap.remove(2000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -90,10 +87,8 @@ public class MapComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 100000; i++)
-		{
-			hashMap.getOrDefault(i, "value"+i);
-		}
+		hashMap.get(10000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -105,10 +100,9 @@ public class MapComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 100000; i++)
-		{
-			treeMap.getOrDefault(i, "value"+i);
-		}
+
+		treeMap.get(15000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 

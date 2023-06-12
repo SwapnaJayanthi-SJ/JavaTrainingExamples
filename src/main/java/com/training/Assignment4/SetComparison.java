@@ -60,10 +60,8 @@ public class SetComparison
 
 		//remove Integer comparison
 
-		for(int i = 0; i < 100000; i++)
-		{
-			hashSet.remove(i);
-		}
+		hashSet.remove(2000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -75,10 +73,8 @@ public class SetComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 100000; i++)
-		{
-			treeSet.remove(i);
-		}
+		treeSet.remove(1000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -86,6 +82,7 @@ public class SetComparison
 		System.out.println("TreeSet integer_deletion time: " + (endTime - startTime) + " ns ");
 		System.out.println("TreeSet memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
 		System.out.println("==============================");
+		
 
 		//adding Strings comparison
 

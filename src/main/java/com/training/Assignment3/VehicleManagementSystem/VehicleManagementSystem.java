@@ -157,7 +157,7 @@ public class VehicleManagementSystem
 				break;
 			case 6:
 				// Quit
-				System.out.println("Exiting...");
+				System.out.println("Thank you for using our service, Please visit again...");
 				break;
 			default:
 				System.out.println("Invalid choice.");

@@ -11,7 +11,7 @@ public class ListComparison
 		Runtime runtime = Runtime.getRuntime();
 		return runtime.totalMemory() - runtime.freeMemory();
 	}
-	public static void main(String[] args) {
+	    public static void main(String[] args) {
 		List<Integer> arrayList = new ArrayList<Integer>();
 		List<Integer> linkedList = new LinkedList<Integer>();
 
@@ -59,10 +59,9 @@ public class ListComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 102000; i++)
-		{
-			arrayList.remove(i);
-		}
+		
+			arrayList.remove(5000);
+		
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -74,10 +73,9 @@ public class ListComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 102000; i++)
-		{
-			linkedList.remove(i);
-		}
+		
+			linkedList.remove(6000);
+		
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -86,16 +84,15 @@ public class ListComparison
 		System.out.println("LinkedList memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
 		System.out.println("==============================");
 
-		
+
 		//get Integer comparison
 
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 101000; i++)
-		{
-			arrayList.get(i);
-		}
+		
+			arrayList.get(9000);
+		
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -107,10 +104,9 @@ public class ListComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		for(int i = 0; i < 101000; i++)
-		{
-			linkedList.get(i);
-		}
+		
+			linkedList.get(588);
+		
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -119,63 +115,5 @@ public class ListComparison
 		System.out.println("LinkedList memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
 		System.out.println("==============================");
 
-
-
-		//adding Strings comparison
-
-		startTime = System.nanoTime();
-		memoryBefore = getMemoryUsage();
-
-		arrayList1.add("Swapna");
-
-		memoryAfter = getMemoryUsage();
-		endTime = System.nanoTime();
-
-		System.out.println("==============================");
-		System.out.println("ArrayList string_insertion time: " + (endTime - startTime) + " ns ");
-		System.out.println("ArrayList memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
-		System.out.println("==============================");
-
-		startTime = System.nanoTime();
-		memoryBefore = getMemoryUsage();
-
-		linkedList1.add("Swapna");
-
-		memoryAfter = getMemoryUsage();
-		endTime = System.nanoTime();
-
-		System.out.println("==============================");
-		System.out.println("LinkedList string_instertion time: " + (endTime - startTime) + " ns ");
-		System.out.println("LinkedList memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
-		System.out.println("==============================");
-
-
-		//remove strings comparison
-
-		startTime = System.nanoTime();
-		memoryBefore = getMemoryUsage();
-
-		arrayList1.remove("Swapna");
-
-		memoryAfter = getMemoryUsage();
-		endTime = System.nanoTime();
-
-		System.out.println("==============================");
-		System.out.println("ArrayList string_deletion time: " + (endTime - startTime) + " ns ");
-		System.out.println("ArrayList memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
-		System.out.println("==============================");
-
-		startTime = System.nanoTime();
-		memoryBefore = getMemoryUsage();
-
-		linkedList1.remove("Swapna");
-
-		memoryAfter = getMemoryUsage();
-		endTime = System.nanoTime();
-
-		System.out.println("==============================");
-		System.out.println("LinkedList string_deletion time: " + (endTime - startTime) + " ns ");
-		System.out.println("LinkedList memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
-		System.out.println("==============================");
-	}
+	    }
 }
