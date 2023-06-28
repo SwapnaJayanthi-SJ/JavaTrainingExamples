@@ -13,7 +13,6 @@ import java.util.Map;
 
 public class ProductCatalog implements Serializable
 {
-//	String fileName = "/Java_Project/src/main/java/com/training/Assignment6/phone.txt";
 	private Map < String, Product > products;
 	public ProductCatalog() 
 	{
@@ -41,7 +40,7 @@ public class ProductCatalog implements Serializable
 		{
 			products = (Map<String, Product>) ois.readObject();
 		} 
-		
+
 		catch (IOException | ClassNotFoundException e) 
 		{
 			System.out.println("Error loading products: " + e.getMessage());

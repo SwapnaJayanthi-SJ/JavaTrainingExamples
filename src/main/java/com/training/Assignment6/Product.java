@@ -37,19 +37,19 @@ public class Product implements Serializable
 	}
 	public void setQuantity(int quantity) 
 	{
-        this.quantity = quantity;
-    }
-	
-    public boolean equals(Object obj) 
-    {
-        if (this == obj) 
-        	return true;
-        if (obj == null || getClass() != obj.getClass()) 
-        	return false;
-        Product product = (Product) obj;
-        return Objects.equals(name, product.name);
-    }
-    
+		this.quantity = quantity;
+	}
+
+	public boolean equals(Object obj) 
+	{
+		if (this == obj) 
+			return true;
+		if (obj == null || getClass() != obj.getClass()) 
+			return false;
+		Product product = (Product) obj;
+		return Objects.equals(name, product.name);
+	}
+
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", description=" + description + ", price=" + price + ", quantity=" + quantity+ "]";

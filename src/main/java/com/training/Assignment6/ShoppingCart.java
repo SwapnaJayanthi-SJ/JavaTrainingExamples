@@ -58,23 +58,24 @@ public class ShoppingCart
 			int quantity = entry.getValue();
 			System.out.println(product.getName() + " - Quantity: " + quantity);
 		}
-		  System.out.println("Do you want to remove the Product (Y/N)");
-		  String remove = sc.next();
-		  if(remove.equalsIgnoreCase("y"))
-		  {
-			  System.out.print("Enter the product you want to Remove: ");
-              String removeProduct = sc.next();
-              removeProduct+=sc.nextLine();
-              for (Map.Entry < Product, Integer > item: items.entrySet())
-              {
-            	  if(item.getKey().getName().equalsIgnoreCase(removeProduct))
-            	  {
-            		  removeItem(item.getKey());
-            		  System.out.println("Product removed Sucessfully");
-                      break;
-            		  
-            	  }
-              }
-		  }
+		System.out.println("Total Price: $" +getTotalPrice());
+		System.out.println("Do you want to remove the Product (Y/N)");
+		String remove = sc.next();
+		if(remove.equalsIgnoreCase("y"))
+		{
+			System.out.print("Enter the product you want to Remove: ");
+			String removeProduct = sc.next();
+			removeProduct+=sc.nextLine();
+			for (Map.Entry < Product, Integer > item: items.entrySet())
+			{
+				if(item.getKey().getName().equalsIgnoreCase(removeProduct))
+				{
+					removeItem(item.getKey());
+					System.out.println("Product removed Sucessfully");
+					break;
+
+				}
+			}
+		}
 	}
 }

@@ -7,10 +7,11 @@ public class OnlineShoppingSystem
 	private static Scanner sc;
 	private static OrderHistory orderHistory = new OrderHistory();
 	static ProductCatalog productCatalog = new ProductCatalog();
+	static int choice;
 
 	public static void main(String[] args) 
 	{
-		
+
 		//orderHistory.loadOrderHistory();
 
 		sc = new Scanner(System.in);
@@ -54,14 +55,15 @@ public class OnlineShoppingSystem
 				OrderHistory.viewOrderHistory();
 				break;
 			case 7:
-				OrderHistory.saveProductCatalog();
-				exit = true;
+				System.out.println("Thank you for using our Application, Visit again...");
 				break;
-
+			default:
+				System.out.println("Invalid input...");
 			}
-
-
 		}
+		while(!(choice==7));
+
+
 	}
 
 	private static void createProducts(String filename) 
