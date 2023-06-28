@@ -11,12 +11,10 @@ public class ListComparison
 		Runtime runtime = Runtime.getRuntime();
 		return runtime.totalMemory() - runtime.freeMemory();
 	}
-	    public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		List<Integer> arrayList = new ArrayList<Integer>();
 		List<Integer> linkedList = new LinkedList<Integer>();
-
-		List<String> arrayList1 = new ArrayList<String>();
-		List<String> linkedList1 = new LinkedList<String>();
 
 		long startTime,endTime;
 		long memoryBefore,memoryAfter;
@@ -59,9 +57,9 @@ public class ListComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		
-			arrayList.remove(5000);
-		
+
+		arrayList.remove(5000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -73,9 +71,9 @@ public class ListComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		
-			linkedList.remove(6000);
-		
+
+		linkedList.remove(6000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -90,9 +88,9 @@ public class ListComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		
-			arrayList.get(9000);
-		
+
+		arrayList.get(9000);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -104,9 +102,9 @@ public class ListComparison
 		startTime = System.nanoTime();
 		memoryBefore = getMemoryUsage();
 
-		
-			linkedList.get(588);
-		
+
+		linkedList.get(588);
+
 		memoryAfter = getMemoryUsage();
 		endTime = System.nanoTime();
 
@@ -115,5 +113,18 @@ public class ListComparison
 		System.out.println("LinkedList memory usage: " + (memoryAfter - memoryBefore) + " bytes ");
 		System.out.println("==============================");
 
-	    }
+
+		List<Double> arrayList1 = new ArrayList<Double>();
+		List<Double> linkedList1 = new LinkedList<Double>();
+
+		startTime = System.nanoTime();
+		arrayList1.add(20000.00);
+		endTime = System.nanoTime();
+		System.out.println("ArrayList double: " + (endTime - startTime) + " ns ");
+		
+		linkedList1.add(10000.00);
+		System.out.println("Linkedlist double: " + (endTime - startTime) + " ns ");
+
+
+	}
 }
