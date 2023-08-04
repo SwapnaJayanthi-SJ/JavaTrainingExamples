@@ -13,11 +13,24 @@ public class ShoppingCart
 	{
 
 	}
+	
+	/**
+	 * Add Products and quantity to the Map variable items as key value pair
+	 * 
+	 * @param product
+	 * @param quantity
+	 */
 
 	public void addItem(Product product, int quantity) 
 	{
 		items.put(product, items.getOrDefault(product, 0) + quantity);
 	}
+	
+	/**
+	 * Remove the product from the Map
+	 * 
+	 * @param product
+	 */
 
 	public void removeItem(Product product) 
 	{
@@ -28,6 +41,12 @@ public class ShoppingCart
 	{
 		return items;
 	}
+	
+	/**
+	 * Returns the total price of the Shopping cart products
+	 * @return
+	 */
+	
 	public double getTotalPrice() 
 	{
 		double totalPrice = 0;
@@ -45,6 +64,10 @@ public class ShoppingCart
 		items.clear();
 	}
 
+	/**
+	 * Display the available products from the shopping cart
+	 */
+	
 	public void displayItems() 
 	{
 		if (items.isEmpty()) {

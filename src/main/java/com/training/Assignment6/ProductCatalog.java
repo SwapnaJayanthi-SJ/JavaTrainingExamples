@@ -18,6 +18,14 @@ public class ProductCatalog implements Serializable
 	{
 		products = new HashMap<>();
 	}
+	
+	/**
+	 * Add the products to the products HashMap
+	 * 
+	 * @param productName
+	 * @param productDetails
+	 */
+	
 	public void addProduct(Product product) 
 	{
 		products.put(product.getName(), product);
@@ -26,14 +34,34 @@ public class ProductCatalog implements Serializable
 	{
 		products.remove(product.getName());
 	}
+	
+	/**
+	 * Return the product
+	 * 
+	 * @param name
+	 * @return
+	 */
+	
 	public Product getProduct(String name) 
 	{
 		return products.get(name);
 	}
+	
+	/**
+	 * Return the Product values
+	 * 
+	 * @return
+	 */
+	
 	public Collection <Product> getAllProducts() 
 	{
 		return products.values();
 	}
+	
+	/**
+	 * DeSeralize the Products
+	 */
+	
 	public void loadProducts(String fileName) 
 	{
 		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) 
@@ -46,6 +74,13 @@ public class ProductCatalog implements Serializable
 			System.out.println("Error loading products: " + e.getMessage());
 		}
 	}
+	
+	/**
+	 * Seralize the products
+	 * 
+	 * @param fileName
+	 */
+	
 	public void saveProducts(String fileName) 
 	{
 		try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName)))

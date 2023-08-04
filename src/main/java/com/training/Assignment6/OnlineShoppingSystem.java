@@ -12,8 +12,6 @@ public class OnlineShoppingSystem
 	public static void main(String[] args) 
 	{
 
-		//orderHistory.loadOrderHistory();
-
 		sc = new Scanner(System.in);
 
 		boolean exit = false;
@@ -66,6 +64,8 @@ public class OnlineShoppingSystem
 
 	}
 
+	/** creating the new products **/
+	
 	private static void createProducts(String filename) 
 	{
 

@@ -25,12 +25,24 @@ public class OrderHistory implements Serializable
 	{
 		orders = new ArrayList<>();
 	}
+	
+	/**
+	 * Add orders to the list
+	 * 
+	 * @param order
+	 */
 
 	public static void addOrder(Order order) 
 	{
 		orders.add(order);
 		saveOrderHistory();
 	}
+	
+	/**
+	 * Returns the available Orders
+	 * @return
+	 */
+	
 	public static List < Order > getAllOrders() {
 		return orders;
 	}
@@ -150,6 +162,11 @@ public class OrderHistory implements Serializable
 		}
 	}
 
+	
+	/**
+	 * Deseralize the order History
+	 */
+	
 	public static void loadOrderHistory() 
 	{
 
@@ -164,6 +181,12 @@ public class OrderHistory implements Serializable
 		}
 
 	} 
+	
+	/**
+	 * Seralize the order History
+	 */
+	
+	
 	public static void saveOrderHistory() 
 	{
 		fileName = "C:\\Workspace\\Jun2023_Java\\JavaTrainingExamples\\src\\main\\java\\com\\training\\Assignment6\\OrderHistory.java";
